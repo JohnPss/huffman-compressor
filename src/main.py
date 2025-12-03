@@ -20,13 +20,15 @@ def save_output(path, results):
     with open(path, "w", encoding="utf-8") as f:
         for i, (ser, codes, comp) in enumerate(results, start=1):
             f.write(f"--- Texto {i} ---\n\n")
+            f.write("Estrutura da Árvore (Serializada):\n")
+            f.write(ser + "\n\n")
             f.write("Códigos (palavra -> código):\n")
             for w, c in sorted(codes.items(), key=lambda x: (-len(x[1]), x[0])):
                 f.write(f"{w} -> {c}\n")
             f.write("\nTexto comprimido (bitstring):\n")
             f.write(comp + "\n\n")
             f.write("Informações para decodificação:\n")
-            f.write("tokenization: lowercase; words extracted with regex [a-záâãàéêíóôõúç0-9']+\n")
+            f.write("tokenization: Standard whitespace split; punctuation remains attached to words.\n")            
             f.write("codes_json:\n")
             f.write(json.dumps(codes, ensure_ascii=False) + "\n\n")
 

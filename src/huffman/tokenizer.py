@@ -1,11 +1,11 @@
-import re
 from typing import List
 
 def tokenize(text: str) -> List[str]:
     """
-    Normalize and split text into words.
-    Lowercase, replace newlines with spaces, extract words allowing Portuguese chars and apostrophes.
+    Tokenização simples por espaços em branco (whitespace).
+    Qualquer coisa entre espaços é considerada um 'token' inteiro.
+    Exemplo: 'Olá, mundo!' -> ['Olá,', 'mundo!']
     """
-    text = text.lower().replace("\n", " ")
-    words = re.findall(r"[a-záâãàéêíóôõúç0-9']+", text, flags=re.IGNORECASE)
-    return words
+    # .split() sem argumentos divide por qualquer espaço em branco (espaço, tab, enter)
+    # e remove espaços vazios do resultado.
+    return text.split()
