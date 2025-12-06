@@ -1,0 +1,10 @@
+# Huffman Text Compressor - Dependencies
+# 
+# Este projeto utiliza APENAS a biblioteca padrão do Python.
+# Não há dependências externas a serem instaladas.
+#
+# Requisitos mínimos:
+# - Python 3.6 ou superior
+#
+# Para verificar sua versão do Python:
+#   python3 --version
