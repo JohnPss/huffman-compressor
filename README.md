@@ -365,7 +365,7 @@ ls data/input.dat
 
 **João Pedro Siqueira**  
 Engenharia de Computação - CEFET-MG  
-📧 Email: joao.silva@example.com  
+📧 Email: joaopedrosilvasiqueira1@gmail.com
 🔗 GitHub: [@JohnPss](https://github.com/JohnPss)
 
 **Disciplina:** Algoritmos e Estruturas de Dados  
