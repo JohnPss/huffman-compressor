@@ -1,318 +1,308 @@
---- Texto 1 ---
+=== ÁRVORE DE HUFFMAN ===
+[RAIZ] (Total: 13)
+├── 0: [5]
+│   ├── 0: [2]
+│   │   ├── 0: 'precisão' (1)
+│   │   └── 1: 'alta' (1)
+│   └── 1: [3]
+│       ├── 0: 'e' (1)
+│       └── 1: [2]
+│           ├── 0: 'O' (1)
+│           └── 1: 'executa' (1)
+└── 1: [8]
+    ├── 0: [4]
+    │   ├── 0: [2]
+    │   │   ├── 0: 'velocidade' (1)
+    │   │   └── 1: '.' (1)
+    │   └── 1: [2]
+    │       ├── 0: 'processa' (1)
+    │       └── 1: 'instruções' (1)
+    └── 1: [4]
+        ├── 0: [2]
+        │   ├── 0: 'com' (1)
+        │   └── 1: 'dados' (1)
+        └── 1: [2]
+            ├── 0: 'computador' (1)
+            └── 1: 'em' (1)
 
-Estrutura da Árvore (Serializada):
-[RAIZ] (Total: 12)
+=== CÓDIGOS ===
+precisão: 000
+alta: 001
+e: 010
+O: 0110
+executa: 0111
+velocidade: 1000
+.: 1001
+processa: 1010
+instruções: 1011
+com: 1100
+dados: 1101
+computador: 1110
+em: 1111
+
+=== TEXTO COMPRIMIDO ===
+0110111001111011111100110000101010110111000001001
+
+=== METADADOS ===
+Total de tokens: 13
+Total de códigos: 13
+
+--------------------------------------
+
+=== ÁRVORE DE HUFFMAN ===
+[RAIZ] (Total: 11)
 ├── 0: [4]
 │   ├── 0: [2]
-│   │   ├── 0: 'dados' (1)
-│   │   └── 1: 'processa' (1)
+│   │   ├── 0: 'CPU' (1)
+│   │   └── 1: 'são' (1)
 │   └── 1: [2]
-│       ├── 0: 'com' (1)
-│       └── 1: 'alta' (1)
+│       ├── 0: 'pela' (1)
+│       └── 1: 'rapidamente' (1)
+└── 1: [7]
+    ├── 0: [3]
+    │   ├── 0: 'informações' (1)
+    │   └── 1: [2]
+    │       ├── 0: 'A' (1)
+    │       └── 1: 'armazena' (1)
+    └── 1: [4]
+        ├── 0: [2]
+        │   ├── 0: 'memória' (1)
+        │   └── 1: 'que' (1)
+        └── 1: [2]
+            ├── 0: 'acessadas' (1)
+            └── 1: '.' (1)
+
+=== CÓDIGOS ===
+CPU: 000
+são: 001
+pela: 010
+rapidamente: 011
+informações: 100
+A: 1010
+armazena: 1011
+memória: 1100
+que: 1101
+acessadas: 1110
+.: 1111
+
+=== TEXTO COMPRIMIDO ===
+101011001011100110100111100110100001111
+
+=== METADADOS ===
+Total de tokens: 11
+Total de códigos: 11
+
+--------------------------------------
+
+=== ÁRVORE DE HUFFMAN ===
+[RAIZ] (Total: 13)
+├── 0: [5]
+│   ├── 0: [2]
+│   │   ├── 0: 'processador' (1)
+│   │   └── 1: 'recursos' (1)
+│   └── 1: [3]
+│       ├── 0: 'coordenam' (1)
+│       └── 1: [2]
+│           ├── 0: 'Os' (1)
+│           └── 1: 'operacionais' (1)
 └── 1: [8]
     ├── 0: [4]
     │   ├── 0: [2]
     │   │   ├── 0: 'e' (1)
-    │   │   └── 1: 'instruções' (1)
+    │   │   └── 1: '.' (1)
     │   └── 1: [2]
-    │       ├── 0: 'computador' (1)
-    │       └── 1: 'em' (1)
+    │       ├── 0: 'as' (1)
+    │       └── 1: 'controlam' (1)
     └── 1: [4]
         ├── 0: [2]
-        │   ├── 0: 'O' (1)
-        │   └── 1: 'executa' (1)
+        │   ├── 0: 'do' (1)
+        │   └── 1: 'tarefas' (1)
         └── 1: [2]
-            ├── 0: 'velocidade' (1)
-            └── 1: 'precisão.' (1)
+            ├── 0: 'sistemas' (1)
+            └── 1: 'os' (1)
 
-Códigos (palavra -> código):
-O -> 1100
-computador -> 1010
-e -> 1000
-em -> 1011
-executa -> 1101
-instruções -> 1001
-precisão. -> 1111
-velocidade -> 1110
-alta -> 011
-com -> 010
-dados -> 000
-processa -> 001
+=== CÓDIGOS ===
+processador: 000
+recursos: 001
+coordenam: 010
+Os: 0110
+operacionais: 0111
+e: 1000
+.: 1001
+as: 1010
+controlam: 1011
+do: 1100
+tarefas: 1101
+sistemas: 1110
+os: 1111
 
-Texto comprimido (bitstring):
-11001010110110011011011111010000010000101111
+=== TEXTO COMPRIMIDO ===
+0110111001111011111100110000101010110111000001001
 
-Informações para decodificação:
-tokenization: Standard whitespace split; punctuation remains attached to words.
-codes_json:
-{"dados": "000", "processa": "001", "com": "010", "alta": "011", "e": "1000", "instruções": "1001", "computador": "1010", "em": "1011", "O": "1100", "executa": "1101", "velocidade": "1110", "precisão.": "1111"}
+=== METADADOS ===
+Total de tokens: 13
+Total de códigos: 13
 
---- Texto 2 ---
+--------------------------------------
 
-Estrutura da Árvore (Serializada):
-[RAIZ] (Total: 10)
-├── 0: [4]
-│   ├── 0: [2]
-│   │   ├── 0: 'que' (1)
-│   │   └── 1: 'informações' (1)
-│   └── 1: [2]
-│       ├── 0: 'A' (1)
-│       └── 1: 'armazena' (1)
-└── 1: [6]
-    ├── 0: [2]
-    │   ├── 0: 'pela' (1)
-    │   └── 1: 'são' (1)
-    └── 1: [4]
-        ├── 0: [2]
-        │   ├── 0: 'acessadas' (1)
-        │   └── 1: 'CPU.' (1)
-        └── 1: [2]
-            ├── 0: 'rapidamente' (1)
-            └── 1: 'memória' (1)
-
-Códigos (palavra -> código):
-CPU. -> 1101
-acessadas -> 1100
-memória -> 1111
-rapidamente -> 1110
-A -> 010
-armazena -> 011
-informações -> 001
-pela -> 100
-que -> 000
-são -> 101
-
-Texto comprimido (bitstring):
-0101111011001000101110011101001101
-
-Informações para decodificação:
-tokenization: Standard whitespace split; punctuation remains attached to words.
-codes_json:
-{"que": "000", "informações": "001", "A": "010", "armazena": "011", "pela": "100", "são": "101", "acessadas": "1100", "CPU.": "1101", "rapidamente": "1110", "memória": "1111"}
-
---- Texto 3 ---
-
-Estrutura da Árvore (Serializada):
-[RAIZ] (Total: 12)
-├── 0: [4]
-│   ├── 0: [2]
-│   │   ├── 0: 'tarefas' (1)
-│   │   └── 1: 'as' (1)
-│   └── 1: [2]
-│       ├── 0: 'do' (1)
-│       └── 1: 'recursos' (1)
-└── 1: [8]
-    ├── 0: [4]
-    │   ├── 0: [2]
-    │   │   ├── 0: 'coordenam' (1)
-    │   │   └── 1: 'controlam' (1)
-    │   └── 1: [2]
-    │       ├── 0: 'sistemas' (1)
-    │       └── 1: 'os' (1)
-    └── 1: [4]
-        ├── 0: [2]
-        │   ├── 0: 'Os' (1)
-        │   └── 1: 'operacionais' (1)
-        └── 1: [2]
-            ├── 0: 'e' (1)
-            └── 1: 'processador.' (1)
-
-Códigos (palavra -> código):
-Os -> 1100
-controlam -> 1001
-coordenam -> 1000
-e -> 1110
-operacionais -> 1101
-os -> 1011
-processador. -> 1111
-sistemas -> 1010
-as -> 001
-do -> 010
-recursos -> 011
-tarefas -> 000
-
-Texto comprimido (bitstring):
-11001010110110011011011111010000010000101111
-
-Informações para decodificação:
-tokenization: Standard whitespace split; punctuation remains attached to words.
-codes_json:
-{"tarefas": "000", "as": "001", "do": "010", "recursos": "011", "coordenam": "1000", "controlam": "1001", "sistemas": "1010", "os": "1011", "Os": "1100", "operacionais": "1101", "e": "1110", "processador.": "1111"}
-
---- Texto 4 ---
-
-Estrutura da Árvore (Serializada):
-[RAIZ] (Total: 25)
-├── 0: [10]
-│   ├── 0: [5]
-│   │   ├── 0: [2]
-│   │   │   ├── 0: 'informação' (1)
-│   │   │   └── 1: 'o' (1)
-│   │   └── 1: 'O' (3)
-│   └── 1: 'dado' (5)
-└── 1: [15]
-    ├── 0: [7]
-    │   ├── 0: 'é' (3)
-    │   └── 1: [4]
-    │       ├── 0: [2]
-    │       │   ├── 0: 'gera' (1)
-    │       │   └── 1: 'informação.' (1)
-    │       └── 1: 'um' (2)
-    └── 1: [8]
-        ├── 0: [4]
-        │   ├── 0: [2]
-        │   │   ├── 0: 'bruto.' (1)
-        │   │   └── 1: 'processador' (1)
-        │   └── 1: [2]
-        │       ├── 0: 'processa' (1)
-        │       └── 1: 'processado' (1)
-        └── 1: [4]
-            ├── 0: [2]
-            │   ├── 0: 'e' (1)
-            │   └── 1: 'útil.' (1)
-            └── 1: [2]
-                ├── 0: 'processado.' (1)
-                └── 1: 'A' (1)
-
-Códigos (palavra -> código):
-A -> 11111
-bruto. -> 11000
-e -> 11100
-gera -> 10100
-informação. -> 10101
-processa -> 11010
-processado -> 11011
-processado. -> 11110
-processador -> 11001
-útil. -> 11101
-informação -> 0000
-o -> 0001
-um -> 1011
-O -> 001
-é -> 100
-dado -> 01
-
-Texto comprimido (bitstring):
-0010110010110111000001110011101000010111100101001010111111000010010110111110001011101110011101
-
-Informações para decodificação:
-tokenization: Standard whitespace split; punctuation remains attached to words.
-codes_json:
-{"informação": "0000", "o": "0001", "O": "001", "dado": "01", "é": "100", "gera": "10100", "informação.": "10101", "um": "1011", "bruto.": "11000", "processador": "11001", "processa": "11010", "processado": "11011", "e": "11100", "útil.": "11101", "processado.": "11110", "A": "11111"}
-
---- Texto 5 ---
-
-Estrutura da Árvore (Serializada):
-[RAIZ] (Total: 27)
-├── 0: [11]
-│   ├── 0: 'memória' (5)
-│   └── 1: [6]
-│       ├── 0: 'é' (3)
-│       └── 1: [3]
-│           ├── 0: 'CPU.' (1)
+=== ÁRVORE DE HUFFMAN ===
+[RAIZ] (Total: 29)
+├── 0: [12]
+│   ├── 0: 'dado' (5)
+│   └── 1: [7]
+│       ├── 0: 'O' (3)
+│       └── 1: [4]
+│           ├── 0: [2]
+│           │   ├── 0: 'útil' (1)
+│           │   └── 1: 'A' (1)
 │           └── 1: [2]
-│               ├── 0: 'cara.' (1)
-│               └── 1: 'lenta' (1)
-└── 1: [16]
+│               ├── 0: 'processa' (1)
+│               └── 1: 'e' (1)
+└── 1: [17]
     ├── 0: [8]
     │   ├── 0: [4]
-    │   │   ├── 0: 'a' (2)
+    │   │   ├── 0: 'processado' (2)
     │   │   └── 1: [2]
-    │   │       ├── 0: 'lenta.' (1)
-    │   │       └── 1: 'O' (1)
-    │   └── 1: 'A' (4)
-    └── 1: [8]
+    │   │       ├── 0: 'bruto' (1)
+    │   │       └── 1: 'processador' (1)
+    │   └── 1: '.' (4)
+    └── 1: [9]
         ├── 0: [4]
-        │   ├── 0: [2]
-        │   │   ├── 0: 'disco' (1)
-        │   │   └── 1: 'CPU' (1)
-        │   └── 1: 'rápida' (2)
-        └── 1: [4]
-            ├── 0: [2]
-            │   ├── 0: 'barata.' (1)
-            │   └── 1: 'ajuda' (1)
-            └── 1: [2]
-                ├── 0: 'rápida.' (1)
-                └── 1: 'usa' (1)
-
-Códigos (palavra -> código):
-CPU -> 11001
-O -> 10011
-ajuda -> 11101
-barata. -> 11100
-cara. -> 01110
-disco -> 11000
-lenta -> 01111
-lenta. -> 10010
-rápida. -> 11110
-usa -> 11111
-CPU. -> 0110
-a -> 1000
-rápida -> 1101
-A -> 101
-é -> 010
-memória -> 00
-
-Texto comprimido (bitstring):
-10100110101001110101000111101011100101110011111110000011110100111100001000100101010011011110110000110
-
-Informações para decodificação:
-tokenization: Standard whitespace split; punctuation remains attached to words.
-codes_json:
-{"memória": "00", "é": "010", "CPU.": "0110", "cara.": "01110", "lenta": "01111", "a": "1000", "lenta.": "10010", "O": "10011", "A": "101", "disco": "11000", "CPU": "11001", "rápida": "1101", "barata.": "11100", "ajuda": "11101", "rápida.": "11110", "usa": "11111"}
-
---- Texto 6 ---
-
-Estrutura da Árvore (Serializada):
-[RAIZ] (Total: 25)
-├── 0: [10]
-│   ├── 0: [5]
-│   │   ├── 0: [2]
-│   │   │   ├── 0: 'para' (1)
-│   │   │   └── 1: 'libera' (1)
-│   │   └── 1: 'sistema' (3)
-│   └── 1: 'o' (5)
-└── 1: [15]
-    ├── 0: [7]
-    │   ├── 0: 'processo.' (3)
-    │   └── 1: 'O' (4)
-    └── 1: [8]
-        ├── 0: [4]
-        │   ├── 0: [2]
-        │   │   ├── 0: 'controla' (1)
-        │   │   └── 1: 'processo' (1)
+        │   ├── 0: 'informação' (2)
         │   └── 1: [2]
-        │       ├── 0: 'usa' (1)
-        │       └── 1: 'do' (1)
-        └── 1: [4]
-            ├── 0: [2]
-            │   ├── 0: 'controlador' (1)
-            │   └── 1: 'é' (1)
-            └── 1: [2]
-                ├── 0: 'recurso.' (1)
-                └── 1: 'recurso' (1)
+        │       ├── 0: 'gera' (1)
+        │       └── 1: 'o' (1)
+        └── 1: [5]
+            ├── 0: 'um' (2)
+            └── 1: 'é' (3)
 
-Códigos (palavra -> código):
-controla -> 11000
-controlador -> 11100
-do -> 11011
-processo -> 11001
-recurso -> 11111
-recurso. -> 11110
-usa -> 11010
-é -> 11101
-libera -> 0001
-para -> 0000
-O -> 101
-processo. -> 100
-sistema -> 001
-o -> 01
+=== CÓDIGOS ===
+dado: 00
+O: 010
+útil: 01100
+A: 01101
+processa: 01110
+e: 01111
+processado: 1000
+bruto: 10010
+processador: 10011
+.: 101
+informação: 1100
+gera: 11010
+o: 11011
+um: 1110
+é: 1111
 
-Texto comprimido (bitstring):
-1010011100001100101110011101001111101010010001011111100000110010100111101011110011011100
+=== TEXTO COMPRIMIDO ===
+01000111111100010010101010100110111011011000111111010110010101101110011111110001000101010001000111101100101
 
-Informações para decodificação:
-tokenization: Standard whitespace split; punctuation remains attached to words.
-codes_json:
-{"para": "0000", "libera": "0001", "sistema": "001", "o": "01", "processo.": "100", "O": "101", "controla": "11000", "processo": "11001", "usa": "11010", "do": "11011", "controlador": "11100", "é": "11101", "recurso.": "11110", "recurso": "11111"}
+=== METADADOS ===
+Total de tokens: 29
+Total de códigos: 15
 
+--------------------------------------
+
+=== ÁRVORE DE HUFFMAN ===
+[RAIZ] (Total: 32)
+├── 0: [14]
+│   ├── 0: [6]
+│   │   ├── 0: 'é' (3)
+│   │   └── 1: 'rápida' (3)
+│   └── 1: [8]
+│       ├── 0: [4]
+│       │   ├── 0: [2]
+│       │   │   ├── 0: 'ajuda' (1)
+│       │   │   └── 1: 'disco' (1)
+│       │   └── 1: 'CPU' (2)
+│       └── 1: [4]
+│           ├── 0: [2]
+│           │   ├── 0: 'barata' (1)
+│           │   └── 1: 'usa' (1)
+│           └── 1: 'a' (2)
+└── 1: [18]
+    ├── 0: [8]
+    │   ├── 0: 'A' (4)
+    │   └── 1: [4]
+    │       ├── 0: 'lenta' (2)
+    │       └── 1: [2]
+    │           ├── 0: 'cara' (1)
+    │           └── 1: 'O' (1)
+    └── 1: [10]
+        ├── 0: '.' (5)
+        └── 1: 'memória' (5)
+
+=== CÓDIGOS ===
+é: 000
+rápida: 001
+ajuda: 01000
+disco: 01001
+CPU: 0101
+barata: 01100
+usa: 01101
+a: 0111
+A: 100
+lenta: 1010
+cara: 10110
+O: 10111
+.: 110
+memória: 111
+
+=== TEXTO COMPRIMIDO ===
+100111001000101101101001111010000011001101000101011010111111001110101110100100011110101101001110010100001110101110
+
+=== METADADOS ===
+Total de tokens: 32
+Total de códigos: 14
+
+--------------------------------------
+
+=== ÁRVORE DE HUFFMAN ===
+[RAIZ] (Total: 29)
+├── 0: [12]
+│   ├── 0: 'o' (5)
+│   └── 1: [7]
+│       ├── 0: [3]
+│       │   ├── 0: 'é' (1)
+│       │   └── 1: [2]
+│       │       ├── 0: 'controla' (1)
+│       │       └── 1: 'usa' (1)
+│       └── 1: 'processo' (4)
+└── 1: [17]
+    ├── 0: [8]
+    │   ├── 0: '.' (4)
+    │   └── 1: 'O' (4)
+    └── 1: [9]
+        ├── 0: [4]
+        │   ├── 0: [2]
+        │   │   ├── 0: 'controlador' (1)
+        │   │   └── 1: 'do' (1)
+        │   └── 1: [2]
+        │       ├── 0: 'libera' (1)
+        │       └── 1: 'para' (1)
+        └── 1: [5]
+            ├── 0: 'recurso' (2)
+            └── 1: 'sistema' (3)
+
+=== CÓDIGOS ===
+o: 00
+é: 0100
+controla: 01010
+usa: 01011
+processo: 011
+.: 100
+O: 101
+controlador: 11000
+do: 11001
+libera: 11010
+para: 11011
+recurso: 1110
+sistema: 1111
+
+=== TEXTO COMPRIMIDO ===
+1011111010100001110010101101011001110100101111111010001110110110001110010111110100001100011001011100
+
+=== METADADOS ===
+Total de tokens: 29
+Total de códigos: 13
+
+--------------------------------------

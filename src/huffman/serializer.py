@@ -2,8 +2,8 @@ from .tree import Node
 
 def serialize_tree(root: Node) -> str:
     """
-    Gera uma representação visual (textual/ASCII) da árvore de Huffman.
-    Isso atende ao requisito de 'formato textual' e facilita a correção.
+    Gera uma representação textual da árvore de Huffman.
+    Mostra frequências e palavras, facilitando visualização e correção.
     """
     if not root:
         return "Árvore vazia"
